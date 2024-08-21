@@ -15,6 +15,7 @@
             overflow: hidden;
         }
 
+        /* Use a background image on the body instead of an img element */
         .background-image {
             position: absolute;
             top: 0;
@@ -24,14 +25,17 @@
             object-fit: cover; /* Ensures the image covers the entire page without distortion */
         }
 
+        /* Desktop Background Image */
+        body {
+            background-image: url('CS Bacs.png');
+            background-size: cover;
+            background-position: center;
+        }
+
         /* Mobile-specific background image */
         @media (max-width: 768px) {
-            .background-image {
+            body {
                 background-image: url('BacsMbg.png'); /* Mobile background image */
-                background-size: cover;
-                background-position: center;
-                object-fit: cover;
-                content: '';
             }
         }
 
@@ -67,13 +71,10 @@
     </style>
 </head>
 <body>
-    <!-- Desktop Background Image -->
-    <img src="CS Bacs.png" alt="Full Page Background" class="background-image">
-
     <!-- Social Media Icons -->
     <div class="social-icons">
         <a href="https://www.linkedin.com/company/bacs-kmgp/" target="_blank" class="linkedin"></a>
-        <a href="https://www.bacskmgp@gmail.com" class="gmail"></a>
+        <a href="mailto:bacskmgp@gmail.com" class="gmail"></a>
     </div>
 </body>
 </html>
