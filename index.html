@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BACS KMGP</title>
+    <title>Full Page Image Background</title>
     <style>
         body, html {
             margin: 0;
@@ -24,9 +24,14 @@
             object-fit: cover; /* Ensures the image covers the entire page without distortion */
         }
 
+        /* Mobile-specific background image */
         @media (max-width: 768px) {
             .background-image {
-                object-position: center; /* Ensures the image remains centered on smaller screens */
+                background-image: url('BacsMbg.png'); /* Mobile background image */
+                background-size: cover;
+                background-position: center;
+                object-fit: cover;
+                content: '';
             }
         }
 
@@ -62,6 +67,7 @@
     </style>
 </head>
 <body>
+    <!-- Desktop Background Image -->
     <img src="CS Bacs.png" alt="Full Page Background" class="background-image">
 
     <!-- Social Media Icons -->
