@@ -23,10 +23,51 @@
             height: 100%;
             object-fit: cover; /* Ensures the image covers the entire page without distortion */
         }
+
+        @media (max-width: 768px) {
+            .background-image {
+                object-position: center; /* Ensures the image remains centered on smaller screens */
+            }
+        }
+
+        /* Styles for the social media icons */
+        .social-icons {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a.linkedin {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png'); /* LinkedIn logo */
+        }
+
+        .social-icons a.gmail {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png'); /* Gmail logo */
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1); /* Slightly enlarge the icon on hover */
+        }
     </style>
 </head>
 <body>
-    <!-- Replace 'your-image.jpg' with the actual path to your image -->
     <img src="CS Bacs.png" alt="Full Page Background" class="background-image">
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/company/bacs-kmgp/" target="_blank" class="linkedin"></a>
+        <a href="https://www.bacskmgp@gmail.com" class="gmail"></a>
+    </div>
 </body>
 </html>
